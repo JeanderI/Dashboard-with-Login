@@ -1,9 +1,14 @@
+import { AuthProvider } from "./providers/AuthProvider";
 import { RoutesMain } from "./routes";
+import GlobalStyle from "./styles/GlobalStyle";
 
 export const App = () => {
   return (
     <>
-      <RoutesMain />
+      <GlobalStyle />
+      <AuthProvider>
+        <RoutesMain />
+      </AuthProvider>
     </>
   );
 };
